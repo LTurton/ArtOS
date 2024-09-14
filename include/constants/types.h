@@ -83,6 +83,6 @@ constexpr bool is_int_like_v = is_any_of_v<
 >;
 
 template <class T>
-concept int_like = is_int_like_v<T>;
+concept int_like = is_int_like_v<T>; //Concept isn't reverse compatible so requires C++ 20 which isn't fully supported on some compilers just fyi
 
 #endif
