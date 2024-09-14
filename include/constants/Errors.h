@@ -4,7 +4,7 @@
 
 #ifndef ERRORS_H
 #define ERRORS_H
-enum Errors {
+enum class Errors {
 	NO_ERROR,
 	INVALID_ARG,
 	NO_MEMORY,
