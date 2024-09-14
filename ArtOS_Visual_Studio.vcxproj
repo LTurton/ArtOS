@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <ProjectGuid>{4B94BB46-4578-4D13-8046-A4A83C5CA90D}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <WarningLevel>Level3</WarningLevel>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PreprocessorDefinitions>_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <WarningLevel>Level3</WarningLevel>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <WarningLevel>Level3</WarningLevel>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PreprocessorDefinitions>NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <WarningLevel>Level3</WarningLevel>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="include\arch\x86\IDT.S" />
+    <None Include="include\grub.cfg" />
+    <None Include="out\build\x64-debug\cmakefiles\3.29.5-msvc4\CMakeDetermineCompilerABI_C.bin" />
+    <None Include="out\build\x64-debug\cmakefiles\3.29.5-msvc4\CMakeDetermineCompilerABI_CXX.bin" />
+    <None Include="src\boot.S" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="include\arch\x86\CPU.cpp" />
+    <ClCompile Include="include\arch\x86\device_info\ACPI.cpp" />
+    <ClCompile Include="include\arch\x86\device_info\APIC.cpp" />
+    <ClCompile Include="include\arch\x86\device_info\CPUID.cpp" />
+    <ClCompile Include="include\arch\x86\device_info\IOAPIC.cpp" />
+    <ClCompile Include="include\arch\x86\device_info\LocalAPIC.cpp" />
+    <ClCompile Include="include\arch\x86\device_info\PCI.cpp" />
+    <ClCompile Include="include\arch\x86\device_info\PIC.cpp" />
+    <ClCompile Include="include\arch\x86\device_info\SMBIOS.cpp" />
+    <ClCompile Include="include\arch\x86\drivers\storage\ATA.cpp" />
+    <ClCompile Include="include\arch\x86\drivers\storage\BusMaster.cpp" />
+    <ClCompile Include="include\arch\x86\drivers\storage\IDE.cpp" />
+    <ClCompile Include="include\arch\x86\IDT.cpp" />
+    <ClCompile Include="include\arch\x86\multiboot2.cpp" />
+    <ClCompile Include="include\arch\x86\Serial.cpp" />
+    <ClCompile Include="include\arch\x86\timers\PIT.cpp" />
+    <ClCompile Include="include\arch\x86\timers\RTC.cpp" />
+    <ClCompile Include="include\arch\x86\timers\TSC.cpp" />
+    <ClCompile Include="include\constants\FONT.cpp" />
+    <ClCompile Include="include\constants\splash_screen.cpp" />
+    <ClCompile Include="include\EventQueue.cpp" />
+    <ClCompile Include="include\mystring.cpp" />
+    <ClCompile Include="include\Terminal.cpp" />
+    <ClCompile Include="include\VideoGraphicsArray.cpp" />
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\sys\Files.cpp" />
+    <ClCompile Include="src\sys\kernel.cpp" />
+    <ClCompile Include="src\sys\memory.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\arch\x86\CPU.h" />
+    <ClInclude Include="include\arch\x86\device_info\ACPI.h" />
+    <ClInclude Include="include\arch\x86\device_info\APIC.h" />
+    <ClInclude Include="include\arch\x86\device_info\CPUID.h" />
+    <ClInclude Include="include\arch\x86\device_info\IOAPIC.h" />
+    <ClInclude Include="include\arch\x86\device_info\LocalAPIC.h" />
+    <ClInclude Include="include\arch\x86\device_info\PCI.h" />
+    <ClInclude Include="include\arch\x86\device_info\PIC.h" />
+    <ClInclude Include="include\arch\x86\device_info\ports.h" />
+    <ClInclude Include="include\arch\x86\device_info\SMBIOS.h" />
+    <ClInclude Include="include\arch\x86\drivers\storage\ATA.h" />
+    <ClInclude Include="include\arch\x86\drivers\storage\BusMaster.h" />
+    <ClInclude Include="include\arch\x86\drivers\storage\IDE.h" />
+    <ClInclude Include="include\arch\x86\IDT.h" />
+    <ClInclude Include="include\arch\x86\multiboot2.h" />
+    <ClInclude Include="include\arch\x86\Serial.h" />
+    <ClInclude Include="include\arch\x86\timers\PIT.h" />
+    <ClInclude Include="include\arch\x86\timers\RTC.h" />
+    <ClInclude Include="include\arch\x86\timers\TSC.h" />
+    <ClInclude Include="include\constants\colours.h" />
+    <ClInclude Include="include\constants\doomtypes.h" />
+    <ClInclude Include="include\constants\Errors.h" />
+    <ClInclude Include="include\constants\FONT.h" />
+    <ClInclude Include="include\constants\multiboot_header.h" />
+    <ClInclude Include="include\constants\splash_screen.h" />
+    <ClInclude Include="include\constants\types.h" />
+    <ClInclude Include="include\EventQueue.h" />
+    <ClInclude Include="include\mystring.h" />
+    <ClInclude Include="include\Terminal.h" />
+    <ClInclude Include="include\VideoGraphicsArray.h" />
+    <ClInclude Include="src\sys\Files.h" />
+    <ClInclude Include="src\sys\kernel.h" />
+    <ClInclude Include="src\sys\logging.h" />
+    <ClInclude Include="src\sys\memory.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="include\arch\x86\timers\timer_types.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
